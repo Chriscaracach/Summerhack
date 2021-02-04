@@ -1,0 +1,79 @@
+/*genéricas*/
+.dn {
+  display: none;
+}
+.db {
+  display: inline;
+}
+.centrar {
+  margin: auto;
+}
+
+.backclaro {
+  background-color: #9fede0;
+}
+.backoscuro {
+  background-color: #45ccb5;
+}
+
+body {
+  background-color: #9fede0;
+  color: #112222;
+  margin: 0;
+  font-family: "Chakra Petch", sans-serif;
+}
+/*Header*/
+.headercustom {
+  background-color: #45ccb5;
+}
+#navbtn {
+  background-color: #f58634;
+  transition: 200ms;
+  border: 5px solid #45ccb5;
+}
+#navbtn:hover {
+  background-color: #45ccb5;
+}
+#cambbtn {
+  background-color: #f58634;
+  transition: 200ms;
+  border: 5px solid #45ccb5;
+}
+#cambbtn:hover {
+  background-color: #45ccb5;
+}
+#navinput {
+  border: none;
+}
+
+/*Lista*/
+.isize {
+  margin: auto;
+  height: 50px;
+  width: 50px;
+}
+
+/*Botón inferior*/
+
+#modalbtn {
+  position: absolute;
+  bottom: 5vh;
+  right: 5vw;
+  font-size: 40px;
+  background-color: #f58634;
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  transition: 200ms;
+  border: none;
+}
+#modalbtn:hover {
+  background-color: #45ccb5;
+}
+
+@media only screen and (min-width: 1224px) {
+  body {
+    background-color: #f8f1f1;
+    color: #5eaaa8;
+  }
+}

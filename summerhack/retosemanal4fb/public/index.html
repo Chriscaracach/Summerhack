@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--Hola Jony, soy Christian, gracias por todo lo que nos enseñás en éste curso. Ya aprendí un montón hasta ahora y éste reto en particular me voló la cabeza. Espero que esté mas o menos bien. Un abrazo -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--METAS-->
+  <meta name="description" content="Una app donde Kero adivina tu destino y el de un amigue y comprueba si son compatibles">
+  <meta name="keywords" content="app, kero, cartas, adivinación, destino">
+  <meta name="author" content="Christian Caracach">
+  <meta name="copyright" content="Copyright 2021">
+  <meta name="robots" content="index">
+
+  <!--Meta para Facebook-->
+  <meta property="og:title" content="Kero sabe - Christian Caracach" />
+  <meta property="og:type" content="App adivinadora">
+  <meta property="og:url" content="https://retosemanal4.web.app" />
+  <meta property="og:image" content="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d52c33ec-0b98-4c5c-af44-48ece469777a/d24amog-2472f6a1-4bfc-4d89-b8c4-bff7c6629033.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZDUyYzMzZWMtMGI5OC00YzVjLWFmNDQtNDhlY2U0Njk3NzdhXC9kMjRhbW9nLTI0NzJmNmExLTRiZmMtNGQ4OS1iOGM0LWJmZjdjNjYyOTAzMy5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.sTFYGMjlmXUy5uxRbx1g7QiMTc-lMpNfoDFHliY3gQs" />   
+  <!--Meta para Twitter-->
+  <meta property="twitter:title" content="Kero sabe - Christian Caracach" />
+  <meta property="twitter:type" content="App adivinadora" />
+  <meta property="twitter:url" content="https://retosemanal4.web.app" />
+  <meta property="twitter:image" content="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d52c33ec-0b98-4c5c-af44-48ece469777a/d24amog-2472f6a1-4bfc-4d89-b8c4-bff7c6629033.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZDUyYzMzZWMtMGI5OC00YzVjLWFmNDQtNDhlY2U0Njk3NzdhXC9kMjRhbW9nLTI0NzJmNmExLTRiZmMtNGQ4OS1iOGM0LWJmZjdjNjYyOTAzMy5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.sTFYGMjlmXUy5uxRbx1g7QiMTc-lMpNfoDFHliY3gQs" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Gorditas&display=swap" rel="stylesheet">
+  <title>Kero sabe</title>
+  <link rel="icon" type="image/png" href="img/kero.png"/>
+
+</head>
+<body>
+  <div id="marco">
+  <section class="sec" id="ppal">
+
+    <div class="container text-center">
+      <h1 class="h1custom" id="ppal__titulo">Kero sabe</h1>
+      <img src="img/keroposta.jpg" alt="" class="img-fluid" id="ppal__img">
+      <div class="mb-3">
+        <label for="ppal__input1" class="form-label">Jugador/a 1</label>
+        <input type="text" class="form-control inputcustom" id="ppal__input1" placeholder="Ingresá el nombre">
+      </div>
+      <div class="mb-3">
+        <label for="ppal_input2" class="form-label">Jugador/a 2</label>
+        <input type="text" class="form-control inputcustom" id="ppal__input2" placeholder="Ingresá el nombre">
+      </div>
+      <button type="button" class="btn btn-primary btn-lg btncustom" id="ppal__btn">JUGAR</button>
+    </div>
+    <div class="text-center">
+      <h3 class="h3custom dn" id="ppal__subtitulo">Juegos anteriores</h3>
+    </div>
+    <ul class="list-group" id="ppal__ul">
+      
+    </ul>
+  </section>
+
+  <section class="sec dn" id="carga">
+    <div class="container text-center">
+      <img src="img/kero.jpg" alt="" class="img-fluid" id="carga__img" style="filter: sepia(20%)">
+      <h1 class="h1custom">Kero está adivinando su futuro...</h1>
+    </div>
+  </section>
+
+  <section class="sec dn" id="cartas" >
+    <div class="container">
+    <div class="text-center">
+      <button type="button" class="btn btn-primary btncustom" data-bs-toggle="modal" data-bs-target="#modalInicial" id="cartas__btncontinuar">
+        X
+      </button>
+      <button type="button" class="btn btn-primary btncustom dn" id="cartas__btnmodalsec">
+        X
+      </button>
+      <h1 class="h1custom">Resultados</h1>
+      <h3 class="h3custom" id="cartas__sub"></h3>
+      <!--carrusel-->
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-interval="false">
+        <div class="carousel-inner" id="cartas__carrucont">          
+        </div>
+        <ol class="carousel-indicators" id="cartas__ol">
+        </ol>
+      </div>
+    </div>
+    
+<!-- Modal -->
+<div class="modal fade" id="modalInicial" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="container text-center align-items-center">
+          <button type="button" class="btn btn-primary btn-lg btncustom cartas__btnmodal" id="cartas__btnmodal1" data-bs-dismiss="modal">Calcular match entre jugadores/as</button>
+          <button type="button" class="btn btn-primary btn-lg btncustom cartas__btnmodal" id="cartas__btnmodal2" data-bs-dismiss="modal">Volver a adivinar el futuro</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  </section>
+
+  <section class="sec dn" id="match">
+    <div class="container text-center">
+      <div class="match__parte">
+        <h1 class="h1custom">Resultados</h1>
+      <h3 class="h3custom">Jugador/a 1</h3>
+      <div class="row match__row" id="match__row1">
+      </div>
+      <h3  class="h3custom">Jugador/a 2</h3>
+      <div class="row match__row" id="match__row2">
+      </div>
+      </div>
+      <div class="match__parte">
+      <h1 class="h1custom" id="match__h1">Match</h1>
+      <h1 class="match dn" id="match__si">SI</h1>
+      <h1 class="match dn" id="match__no">NO</h1>
+      <div class="row match__botonera">
+        <div class="col-6"><button type="button" class="btn btn-primary btn-lg btncustom" id="match__btnguardar">Guardar</button></div>
+        <div class="col-6"><button type="button" class="btn btn-primary btn-lg btncustom" id="match__btncerrar">Cerrar</button></div>
+      </div>
+    </div>
+    
+    </div>
+    
+  </section>
+</div>
+<script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
